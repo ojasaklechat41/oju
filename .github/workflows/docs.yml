@@ -35,17 +35,17 @@ jobs:
           cd docs
           make clean
           make html
-          touch _build/html/.nojekyll  # Add .nojekyll file
+          touch build/html/.nojekyll  # Add .nojekyll file
 
       - name: Show directory structure
         run: |
-          ls -la docs/_build/
-          ls -la docs/_build/html/
+          ls -la docs/build/
+          ls -la docs/build/html/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: docs/_build/html
+          folder: docs/build/html
           branch: gh-pages
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
