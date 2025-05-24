@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Tests](https://github.com/ojasaklechayt/oju/actions/workflows/tests.yml/badge.svg)](https://github.com/ojasaklechayt/oju/actions)
+[![Tests](https://github.com/ojasaklechat41/oju/actions/workflows/tests.yml/badge.svg)](https://github.com/ojasaklechat41/oju/actions)
 [![codecov](https://codecov.io/gh/ojasaklechayt/oju/graph/badge.svg?token=YOUR_TOKEN_HERE)](https://codecov.io/gh/ojasaklechayt/oju)
 
 OJU is a lightweight, extensible framework for building and managing AI agents powered by various large language models (LLMs) including OpenAI, Anthropic, and Google's Gemini.
@@ -31,7 +31,7 @@ pip install oju
 For development:
 
 ```bash
-git clone https://github.com/ojasaklechayt/oju.git
+git clone https://github.com/ojasaklechat41/oju.git
 cd oju
 pip install -e ".[dev]"
 ```
@@ -321,7 +321,7 @@ pytest -v
 We use several tools to maintain code quality:
 
 ```bash
-git clone https://github.com/ojasaklechayt/oju.git
+git clone https://github.com/ojasaklechat41/oju.git
 cd oju
 pip install -e ".[dev]"
 ```
@@ -369,7 +369,7 @@ For detailed information on how to contribute, please see our [Contributing Guid
 
 ### Ways to Contribute
 
-- Report bugs by [opening a new issue](https://github.com/ojasaklechayt/oju/issues/new/choose)
+- Report bugs by [opening a new issue](https://github.com/ojasaklechat41/oju/issues/new/choose)
 - Suggest new features or enhancements
 - Submit pull requests for bug fixes or new features
 - Improve documentation
@@ -409,9 +409,9 @@ SOFTWARE.
 Ojas Aklecha 
 - Twitter: [@ojasaklecha](https://twitter.com/ojasaklecha)
 - Email: ojasaklechayt@gmail.com
-- GitHub: [@ojasaklechayt](https://github.com/ojasaklechayt)
+- GitHub: [@ojasaklechayt](https://github.com/ojasaklechat41)
 
-Project Link: [https://github.com/ojasaklechayt/oju](https://github.com/ojasaklechayt/oju)
+Project Link: [https://github.com/ojasaklechat41/oju](https://github.com/ojasaklechat41/oju)
 
 ## 🙏 Acknowledgments
 

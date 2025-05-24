@@ -5,7 +5,7 @@ Thank you for your interest in contributing to OJU! We welcome all contributions
 ## How to Contribute
 
 ### Reporting Issues
-- Check the [existing issues](https://github.com/ojasaklechayt/oju/issues) to see if the issue has already been reported
+- Check the [existing issues](https://github.com/ojasaklechat41/oju/issues) to see if the issue has already been reported
 - If not, create a new issue with a clear title and description
 - Include steps to reproduce the issue and any relevant error messages
 - Specify your Python version and the versions of any relevant packages

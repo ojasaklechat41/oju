@@ -7,7 +7,7 @@ Installation
    pip install oju
 
    # Or install from source
-   git clone https://github.com/ojasaklechayt/oju.git
+   git clone https://github.com/ojasaklechat41/oju.git
    cd oju
    pip install -e .
 

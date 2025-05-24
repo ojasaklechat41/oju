@@ -6,7 +6,7 @@ We welcome contributions to OJU! Here's how you can help:
 Reporting Issues
 ****************
 
-- Check the `issue tracker <https://github.com/ojasaklechayt/oju/issues>`_ to see if the issue has already been reported
+- Check the `issue tracker <https://github.com/ojasaklechat41/oju/issues>`_ to see if the issue has already been reported
 - If not, create a new issue with a clear title and description
 - Include steps to reproduce the issue and any relevant error messages
 - Specify your Python version and the versions of any relevant packages
@@ -18,7 +18,7 @@ Development Setup
 
    .. code-block:: bash
 
-      git clone https://github.com/ojasaklechayt/oju.git
+      git clone https://github.com/ojasaklechat41/oju.git
       cd oju
 
 2. **Set up a virtual environment** (recommended)

@@ -34,9 +34,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/ojasaklechayt/oju"
-"Bug Tracker" = "https://github.com/ojasaklechayt/oju/issues"
-Source = "https://github.com/ojasaklechayt/oju"
+Homepage = "https://github.com/ojasaklechat41/oju"
+"Bug Tracker" = "https://github.com/ojasaklechat41/oju/issues"
+Source = "https://github.com/ojasaklechat41/oju"
 
 [project.optional-dependencies]
 dev = [

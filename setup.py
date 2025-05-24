@@ -12,7 +12,7 @@ setup(
     description='A multi-agent framework supporting multiple LLM providers with structured prompts',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/ojasaklechayt/oju',
+    url='https://github.com/ojasaklechat41/oju',
     packages=find_packages(),
     package_data={
         'oju': ['prompts/**/*.txt'],
@@ -39,7 +39,7 @@ setup(
     python_requires='>=3.8',
     keywords='llm ai agent framework openai anthropic gemini',
     project_urls={
-        'Bug Reports': 'https://github.com/ojasaklechayt/oju/issues',
-        'Source': 'https://github.com/ojasaklechayt/oju',
+        'Bug Reports': 'https://github.com/ojasaklechat41/oju/issues',
+        'Source': 'https://github.com/ojasaklechat41/oju',
     },
 )
