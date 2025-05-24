@@ -63,18 +63,6 @@ GOOGLE_API_KEY='your-google-key'
 
 ### Basic Usage
 
-1. **Create a prompt file** in `oju/prompts/agent_name/prompt.txt`:
-
-```
-You are a helpful AI assistant. Your task is to help with the following:
-
-{{user_input}}
-
-Please provide a clear and concise response.
-```
-
-2. **Use the agent in your Python code**:
-
 ```python
 from oju.agent import Agent
 
@@ -101,6 +89,7 @@ from oju.agent import Agent
 response = Agent(
     agent_name="agent_name",
     model="claude-3-opus-20240229",
+    api_key=os.getenv("ANTHROPIC_API_KEY"),
     provider="claude",
     prompt_input="Tell me a joke about programming"
 )
@@ -135,41 +124,6 @@ ANTHROPIC_API_KEY=your_anthropic_key_here
 GOOGLE_API_KEY=your_google_key_here
 ```
 
-### Custom Prompts and Templates
-
-Create sophisticated prompt templates with dynamic variables:
-
-1. **Basic Template** (`oju/prompts/expert/prompt.txt`):
-   ```
-   You are an expert in {{field}} with 10+ years of experience.
-   
-   Task: {{task}}
-   
-   Requirements:
-   - Use clear, professional language
-   - Include relevant examples
-   - Provide actionable advice
-   
-   User's question: {{question}}
-   ```
-
-2. **Using the Template**:
-   ```python
-   from oju.agent import Agent
-   
-   response = Agent(
-       agent_name="expert",
-       model="gpt-4",
-       provider="openai",
-       prompt_input={
-           "field": "machine learning",
-           "task": "Explain the concept of attention mechanisms",
-           "question": "How do attention mechanisms work in transformers?"
-       }
-   )
-   print(response)
-   ```
-
 ### Error Handling
 
 Handle different types of errors gracefully:
@@ -202,6 +156,7 @@ claude_response = Agent(
     agent_name="expert",
     model="claude-3-opus-20240229",
     provider="claude",
+    api_key=os.getenv("ANTHROPIC_API_KEY"),
     prompt_input="Explain quantum computing in simple terms"
 )
 
@@ -210,34 +165,9 @@ gemini_response = Agent(
     agent_name="expert",
     model="gemini-pro",
     provider="gemini",
+    api_key=os.getenv("GOOGLE_API_KEY"),
     prompt_input="What are the latest trends in AI?"
 )
-```
-
-### Advanced Prompt Engineering
-
-Create complex prompts with conditional logic:
-
-```python
-# In oju/prompts/analyst/prompt.txt
-"""
-You are a {{role}} analyst at {{company}}.
-
-{% if industry == "finance" %}
-  Analyze the following financial data with a focus on risk assessment:
-  {{data}}
-  
-  Provide:
-  1. Key insights
-  2. Potential risks
-  3. Recommended actions
-{% else %}
-  Analyze the following data:
-  {{data}}
-  
-  Provide a summary with main points.
-{% endif %}
-"""
 ```
 
 ### Performance Optimization
@@ -253,6 +183,7 @@ def process_query(query):
         agent_name="expert",
         model="gpt-4",
         provider="openai",
+        api_key=os.getenv("OPENAI_API_KEY"),
         prompt_input=query
     )
 
@@ -375,34 +306,6 @@ For detailed information on how to contribute, please see our [Contributing Guid
 - Improve documentation
 - Add test cases
 - Spread the word about OJU
-
-## 📄 License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-
-```
-MIT License
-
-Copyright (c) 2025 Ojas Aklecha
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 ## 📞 Contact
 
