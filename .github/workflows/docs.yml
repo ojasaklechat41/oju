@@ -7,6 +7,8 @@ on:
       - 'docs/**'
       - 'oju/**'
       - '.github/workflows/docs.yml'
+      - 'pyproject.toml'
+      - 'setup.py'
 
 jobs:
   deploy:
@@ -26,11 +28,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .[dev]
           cd docs && pip install -r requirements-docs.txt
+          pip install sphinx-rtd-theme sphinx-copybutton sphinx-tabs sphinx-autodoc-typehints myst-parser
 
       - name: Build documentation
         run: |
           cd docs
+          make clean
           make html
+          touch _build/html/.nojekyll  # Add .nojekyll file
+
+      - name: Show directory structure
+        run: |
+          ls -la docs/_build/
+          ls -la docs/_build/html/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -39,3 +49,5 @@ jobs:
           branch: gh-pages
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
+          single-commit: true
+          commit-message: "Deploy docs: $(date +'%Y-%m-%d %H:%M:%S')"
