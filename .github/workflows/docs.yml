@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -e .[dev]
+          pip install -e .[dev] --ignore-installed google-generativeai
           cd docs && pip install -r requirements-docs.txt
           pip install sphinx-rtd-theme sphinx-copybutton sphinx-tabs sphinx-autodoc-typehints myst-parser
 
@@ -48,6 +48,6 @@ jobs:
           folder: docs/build/html
           branch: gh-pages
           clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           single-commit: true
           commit-message: "Deploy docs: $(date +'%Y-%m-%d %H:%M:%S')"
