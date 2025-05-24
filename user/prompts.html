@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Working with Prompts &mdash; OJU 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Theoretical Foundations" href="theory.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OJU
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#your-first-api-call">Your First API Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#basic-example">Basic Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#using-different-providers">Using Different Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#using-multiple-agents">Using Multiple Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#environment-variables">Environment Variables</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Working with Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#available-agents">Available Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-built-in-agents">Using Built-in Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-custom-agents-for-developers">Adding Custom Agents (For Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices-for-agent-prompts">Best Practices for Agent Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overriding-prompts">Overriding Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html">Theoretical Foundations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#architecture-overview">Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#design-principles">Design Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#agent-system-architecture">Agent System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#concurrency-model">Concurrency Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#prompt-engineering">Prompt Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#security-considerations">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#performance-optimization">Performance Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#future-directions">Future Directions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html">Examples</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OJU</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">User Guide</a></li>
+      <li class="breadcrumb-item active">Working with Prompts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/prompts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="working-with-prompts">
+<h1>Working with Prompts<a class="headerlink" href="#working-with-prompts" title="Link to this heading"></a></h1>
+<p>OJU is designed to work with structured prompts stored in files, allowing for better organization
+and maintainability of your prompts. This document covers how to use the built-in agents and how to
+add your own custom agents.</p>
+</section>
+<section id="available-agents">
+<h1>Available Agents<a class="headerlink" href="#available-agents" title="Link to this heading"></a></h1>
+<p>OJU comes with specialized agents that can be used by specifying their exact agent name. The current available agents are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backend_coding_agent</span></code> - For backend development tasks and API design</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_coding_agent</span></code> - For frontend development and UI/UX tasks</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New agents will be added continuously to expand OJU’s capabilities. Always check the latest documentation or the <code class="docutils literal notranslate"><span class="pre">oju/prompts</span></code> directory for the most up-to-date list of available agents.</p>
+</div>
+</section>
+<section id="using-built-in-agents">
+<h1>Using Built-in Agents<a class="headerlink" href="#using-built-in-agents" title="Link to this heading"></a></h1>
+<p>To use a built-in agent, simply specify the agent name when initializing the Agent class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oju.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span>
+
+<span class="c1"># Using the backend coding agent</span>
+<span class="n">backend_response</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">agent_name</span><span class="o">=</span><span class="s2">&quot;backend_coding_agent&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s2">&quot;openai&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-api-key-here&quot;</span><span class="p">,</span>
+    <span class="n">prompt_input</span><span class="o">=</span><span class="s2">&quot;How do I implement a REST API in FastAPI?&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-custom-agents-for-developers">
+<h1>Adding Custom Agents (For Developers)<a class="headerlink" href="#adding-custom-agents-for-developers" title="Link to this heading"></a></h1>
+<p>The OJU team continuously adds new agents to the package. You can check the latest available agents by listing the contents of the <code class="docutils literal notranslate"><span class="pre">oju/prompts</span></code> directory.</p>
+<p>To add your own custom agent to the OJU package, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Create a new directory in <code class="docutils literal notranslate"><span class="pre">oju/prompts/</span></code> with your agent’s name (e.g., <code class="docutils literal notranslate"><span class="pre">my_custom_agent/</span></code>)</p></li>
+<li><p>Inside this directory, create a <code class="docutils literal notranslate"><span class="pre">prompt.txt</span></code> file containing your agent’s system prompt</p></li>
+<li><p>The prompt file should define the agent’s behavior, capabilities, and limitations</p></li>
+</ol>
+<p>Example structure for a new agent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>oju/
+└── prompts/
+    └── my_custom_agent/
+        └── prompt.txt
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After adding a new agent directory with its <code class="docutils literal notranslate"><span class="pre">prompt.txt</span></code>, the agent will be automatically detected and available for use in your code. The agent name will be the same as the directory name you created.</p>
+</div>
+</section>
+<section id="best-practices-for-agent-prompts">
+<h1>Best Practices for Agent Prompts<a class="headerlink" href="#best-practices-for-agent-prompts" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Clear Instructions</strong>: Clearly define the agent’s purpose and behavior</p></li>
+<li><p><strong>Input/Output Formatting</strong>: Specify expected input formats and how outputs should be structured</p></li>
+<li><p><strong>Safety Guidelines</strong>: Include safety instructions and content moderation rules</p></li>
+<li><p><strong>Examples</strong>: Provide examples of good inputs and expected outputs</p></li>
+<li><p><strong>Tone and Style</strong>: Define the communication style (formal, casual, technical, etc.)</p></li>
+</ol>
+</section>
+<section id="overriding-prompts">
+<h1>Overriding Prompts<a class="headerlink" href="#overriding-prompts" title="Link to this heading"></a></h1>
+<p>You can override the default prompt by using the <code class="docutils literal notranslate"><span class="pre">custom_system_prompt</span></code> parameter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oju.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span>
+
+<span class="n">custom_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">You are a technical expert in Python programming.</span>
+<span class="s2">Provide detailed code examples and explanations.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">agent_name</span><span class="o">=</span><span class="s2">&quot;backend_coding_agent&quot;</span><span class="p">,</span>  <span class="c1"># Base agent</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s2">&quot;openai&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-api-key-here&quot;</span><span class="p">,</span>
+    <span class="n">prompt_input</span><span class="o">=</span><span class="s2">&quot;How do I use list comprehensions in Python?&quot;</span><span class="p">,</span>
+    <span class="n">custom_system_prompt</span><span class="o">=</span><span class="n">custom_prompt</span>  <span class="c1"># Overrides the default prompt</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="best-practices">
+<h1>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Organize by Agent</strong>: Keep prompts for different agents in separate directories</p></li>
+<li><p><strong>Version Control</strong>: Track changes to your prompts in version control</p></li>
+<li><p><strong>Environment Variables</strong>: Use environment variables for API keys and sensitive information</p></li>
+<li><p><strong>Testing</strong>: Test your prompts thoroughly before deploying to production</p></li>
+<li><p><strong>Documentation</strong>: Document the expected inputs and outputs for each prompt</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="theory.html" class="btn btn-neutral float-right" title="Theoretical Foundations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ojas Aklecha.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

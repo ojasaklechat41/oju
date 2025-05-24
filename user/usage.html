@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage &mdash; OJU 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Working with Prompts" href="prompts.html" />
+    <link rel="prev" title="Getting Started" href="getting-started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OJU
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#your-first-api-call">Your First API Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-example">Basic Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-different-providers">Using Different Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-multiple-agents">Using Multiple Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html">Working with Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#available-agents">Available Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#using-built-in-agents">Using Built-in Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#adding-custom-agents-for-developers">Adding Custom Agents (For Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#best-practices-for-agent-prompts">Best Practices for Agent Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#overriding-prompts">Overriding Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html">Theoretical Foundations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#architecture-overview">Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#design-principles">Design Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#agent-system-architecture">Agent System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#concurrency-model">Concurrency Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#prompt-engineering">Prompt Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#security-considerations">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#performance-optimization">Performance Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#future-directions">Future Directions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html">Examples</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OJU</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">User Guide</a></li>
+      <li class="breadcrumb-item active">Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
+</section>
+<section id="basic-example">
+<h1>Basic Example<a class="headerlink" href="#basic-example" title="Link to this heading"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oju.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span>
+
+<span class="c1"># Initialize and use an agent</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">agent_name</span><span class="o">=</span><span class="s2">&quot;example_agent&quot;</span><span class="p">,</span>  <span class="c1"># Name of the agent (must correspond to a prompt file)</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>              <span class="c1"># Model to use</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s2">&quot;openai&quot;</span><span class="p">,</span>           <span class="c1"># Provider: &#39;openai&#39;, &#39;claude&#39;, or &#39;gemini&#39;</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-api-key-here&quot;</span><span class="p">,</span> <span class="c1"># API key for the provider</span>
+    <span class="n">prompt_input</span><span class="o">=</span><span class="s2">&quot;Hello, how are you?&quot;</span>  <span class="c1"># User input</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="using-different-providers">
+<h1>Using Different Providers<a class="headerlink" href="#using-different-providers" title="Link to this heading"></a></h1>
+<p>OJU supports multiple LLM providers, with plans to continuously add more in the future. Here’s how to use the currently supported providers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using OpenAI</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">agent_name</span><span class="o">=</span><span class="s2">&quot;example_agent&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4&quot;</span><span class="p">,</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s2">&quot;openai&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-openai-key&quot;</span><span class="p">,</span>
+    <span class="n">prompt_input</span><span class="o">=</span><span class="s2">&quot;Your prompt here&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Using Anthropic Claude</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">agent_name</span><span class="o">=</span><span class="s2">&quot;example_agent&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-3-opus-20240229&quot;</span><span class="p">,</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s2">&quot;claude&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-anthropic-key&quot;</span><span class="p">,</span>
+    <span class="n">prompt_input</span><span class="o">=</span><span class="s2">&quot;Your prompt here&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Using Google Gemini</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">agent_name</span><span class="o">=</span><span class="s2">&quot;example_agent&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gemini-pro&quot;</span><span class="p">,</span>
+    <span class="n">provider</span><span class="o">=</span><span class="s2">&quot;gemini&quot;</span><span class="p">,</span>
+    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-google-key&quot;</span><span class="p">,</span>
+    <span class="n">prompt_input</span><span class="o">=</span><span class="s2">&quot;Your prompt here&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The OJU team is continuously working to add support for more LLM providers. Check the latest documentation or release notes for updates on newly added providers.</p>
+</div>
+</section>
+<section id="using-multiple-agents">
+<h1>Using Multiple Agents<a class="headerlink" href="#using-multiple-agents" title="Link to this heading"></a></h1>
+<p>You can run multiple agents in parallel for more complex workflows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreadPoolExecutor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">oju.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">run_agent</span><span class="p">(</span><span class="n">agent_config</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Agent</span><span class="p">(</span><span class="o">**</span><span class="n">agent_config</span><span class="p">)</span>
+
+<span class="c1"># Define multiple agent configurations</span>
+<span class="n">agent_configs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;agent_name&#39;</span><span class="p">:</span> <span class="s1">&#39;research_agent&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;gpt-4&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;provider&#39;</span><span class="p">:</span> <span class="s1">&#39;openai&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prompt_input&#39;</span><span class="p">:</span> <span class="s1">&#39;Research the latest AI trends&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="mf">0.7</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;agent_name&#39;</span><span class="p">:</span> <span class="s1">&#39;summarizer_agent&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;claude-3-opus-20240229&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;provider&#39;</span><span class="p">:</span> <span class="s1">&#39;claude&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prompt_input&#39;</span><span class="p">:</span> <span class="s1">&#39;Summarize this research&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="mf">0.3</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;agent_name&#39;</span><span class="p">:</span> <span class="s1">&#39;critic_agent&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;gemini-pro&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;provider&#39;</span><span class="p">:</span> <span class="s1">&#39;gemini&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prompt_input&#39;</span><span class="p">:</span> <span class="s1">&#39;Provide constructive criticism&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="mf">0.5</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># Run agents in parallel</span>
+<span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">executor</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">run_agent</span><span class="p">,</span> <span class="n">agent_configs</span><span class="p">))</span>
+
+<span class="c1"># Process results</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Agent </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> output:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="environment-variables">
+<h1>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading"></a></h1>
+<p>You can set your API keys as environment variables:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># For OpenAI</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s1">&#39;your-api-key-here&#39;</span>
+
+<span class="c1"># For Anthropic</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="s1">&#39;your-api-key-here&#39;</span>
+
+<span class="c1"># For Google Gemini</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">GOOGLE_API_KEY</span><span class="o">=</span><span class="s1">&#39;your-api-key-here&#39;</span>
+</pre></div>
+</div>
+<p>Or use a <cite>.env</cite> file in your project root:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span>your-api-key-here
+<span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>your-api-key-here
+<span class="nv">GOOGLE_API_KEY</span><span class="o">=</span>your-api-key-here
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prompts.html" class="btn btn-neutral float-right" title="Working with Prompts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ojas Aklecha.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

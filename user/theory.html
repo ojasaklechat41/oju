@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theoretical Foundations &mdash; OJU 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="examples/index.html" />
+    <link rel="prev" title="Working with Prompts" href="prompts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OJU
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#your-first-api-call">Your First API Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#next-steps">Next Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#basic-example">Basic Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#using-different-providers">Using Different Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#using-multiple-agents">Using Multiple Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#environment-variables">Environment Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html">Working with Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#available-agents">Available Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#using-built-in-agents">Using Built-in Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#adding-custom-agents-for-developers">Adding Custom Agents (For Developers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#best-practices-for-agent-prompts">Best Practices for Agent Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#overriding-prompts">Overriding Prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prompts.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Theoretical Foundations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-overview">Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-principles">Design Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agent-system-architecture">Agent System Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concurrency-model">Concurrency Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prompt-engineering">Prompt Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#security-considerations">Security Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#performance-optimization">Performance Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#future-directions">Future Directions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html">Examples</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OJU</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">User Guide</a></li>
+      <li class="breadcrumb-item active">Theoretical Foundations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/theory.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="theoretical-foundations">
+<h1>Theoretical Foundations<a class="headerlink" href="#theoretical-foundations" title="Link to this heading"></a></h1>
+</section>
+<section id="architecture-overview">
+<h1>Architecture Overview<a class="headerlink" href="#architecture-overview" title="Link to this heading"></a></h1>
+<p>OJU is built on a modular architecture that separates concerns between different components:</p>
+<ol class="arabic simple">
+<li><p><strong>Agent Core</strong>: The central component that handles the execution flow</p></li>
+<li><p><strong>Provider Interface</strong>: Abstract layer for different LLM providers</p></li>
+<li><p><strong>Prompt Management</strong>: System for organizing and retrieving prompts</p></li>
+<li><p><strong>Concurrency Layer</strong>: Manages parallel execution of multiple agents</p></li>
+</ol>
+</section>
+<section id="design-principles">
+<h1>Design Principles<a class="headerlink" href="#design-principles" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Extensibility</strong>
+- Provider-agnostic design allows adding new LLM providers with minimal code changes
+- Plugin architecture for custom components</p></li>
+<li><p><strong>Performance</strong>
+- Asynchronous I/O for non-blocking operations
+- Parallel execution of independent agents
+- Connection pooling and request batching</p></li>
+<li><p><strong>Usability</strong>
+- Intuitive API design
+- Comprehensive error handling
+- Detailed logging and monitoring</p></li>
+</ol>
+</section>
+<section id="agent-system-architecture">
+<h1>Agent System Architecture<a class="headerlink" href="#agent-system-architecture" title="Link to this heading"></a></h1>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Agent System Architecture</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+------------------+     +-----------------+     +-----------------+
+|   User           |     |  Agent Manager  |     |    Agent 1      |
+|   Application    |----&gt;|                 |----&gt;|    Agent 2      |
++------------------+     +--------+--------+     |    ...          |
+                                  |             |    Agent N      |
+                                  |             +--------+--------+
+                                  |                      |
+                                  v                      v
++------------------+     +-----------------+     +--------+--------+
+|   OpenAI         |     |  Provider       |&lt;-----+  Provider     |
+|   Anthropic      |&lt;----|  Interface      |      |  Interface   |
+|   Google Gemini  |     |                 |&lt;--+   |              |
++------------------+     +-----------------+   |   +--------------+
+                                              |
+                                              |   +--------------+
+                                              +---|  Provider    |
+                                                  |  Interface   |
+                                                  +--------------+
+</pre></div>
+</div>
+</div>
+</section>
+<section id="concurrency-model">
+<h1>Concurrency Model<a class="headerlink" href="#concurrency-model" title="Link to this heading"></a></h1>
+<p>OJU employs a hybrid concurrency model:</p>
+<ol class="arabic simple">
+<li><p><strong>Thread-based Parallelism</strong>
+- Each agent runs in its own thread
+- I/O-bound operations are non-blocking
+- Thread pool for managing worker threads</p></li>
+<li><p><strong>Asynchronous Execution</strong>
+- Async/await pattern for I/O operations
+- Event loop for managing concurrent tasks
+- Backpressure handling for rate limiting</p></li>
+</ol>
+</section>
+<section id="prompt-engineering">
+<h1>Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Link to this heading"></a></h1>
+<p>OJU implements several prompt engineering best practices:</p>
+<ol class="arabic simple">
+<li><p><strong>Templating System</strong>
+- Reusable prompt templates
+- Variable substitution
+- Conditional logic in prompts</p></li>
+<li><p><strong>Context Management</strong>
+- Conversation history tracking
+- Token window management
+- Context summarization for long conversations</p></li>
+<li><p><strong>Response Formatting</strong>
+- Structured output generation
+- JSON schema validation
+- Streaming responses</p></li>
+</ol>
+</section>
+<section id="security-considerations">
+<h1>Security Considerations<a class="headerlink" href="#security-considerations" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Data Protection</strong>
+- API key management
+- Secure credential storage
+- Request encryption</p></li>
+<li><p><strong>Rate Limiting</strong>
+- Request throttling
+- Exponential backoff
+- Circuit breaker pattern</p></li>
+<li><p><strong>Compliance</strong>
+- Data retention policies
+- Logging and audit trails
+- Privacy controls</p></li>
+</ol>
+</section>
+<section id="performance-optimization">
+<h1>Performance Optimization<a class="headerlink" href="#performance-optimization" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Caching Layer</strong>
+- Response caching
+- Embedding caching
+- Vector similarity search</p></li>
+<li><p><strong>Batch Processing</strong>
+- Request batching
+- Parallel processing
+- Pipeline optimization</p></li>
+<li><p><strong>Resource Management</strong>
+- Connection pooling
+- Memory management
+- Garbage collection</p></li>
+</ol>
+</section>
+<section id="future-directions">
+<h1>Future Directions<a class="headerlink" href="#future-directions" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p><strong>Advanced Features</strong>
+- Multi-agent collaboration
+- Reinforcement learning from human feedback (RLHF)
+- Fine-tuning support</p></li>
+<li><p><strong>Scalability</strong>
+- Distributed execution
+- Load balancing
+- Auto-scaling</p></li>
+<li><p><strong>Extensibility</strong>
+- Custom provider plugins
+- Third-party integrations
+- Community contributions</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prompts.html" class="btn btn-neutral float-left" title="Working with Prompts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples/index.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Ojas Aklecha.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
