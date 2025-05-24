@@ -1,6 +1,6 @@
 # OJU - Multi-Agent Framework for LLMs
 
-[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/ojasaklechat41/oju/actions/workflows/tests.yml/badge.svg)](https://github.com/ojasaklechat41/oju/actions)
@@ -39,7 +39,7 @@ pip install -e ".[dev]"
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8 or higher
+- Python 3.10 or higher
 - API keys for your preferred LLM providers
 
 ### Installation
@@ -202,7 +202,7 @@ We welcome contributions! If you're interested in contributing to OJU, please re
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.10 or higher
 - [Poetry](https://python-poetry.org/) (recommended) or pip
 - Git
 
