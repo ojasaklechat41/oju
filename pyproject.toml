@@ -41,6 +41,7 @@ Source = "https://github.com/ojasaklechat41/oju"
 [project.optional-dependencies]
 dev = [
     "pytest>=6.0",
+    "pytest-cov>=4.0.0",  # For coverage reporting
     "black>=21.5b2",
     "isort>=5.0.0",
     "mypy>=0.900",

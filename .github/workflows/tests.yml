@@ -30,7 +30,7 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest --cov=oju --cov-report=xml
+        python -m pytest --cov=oju --cov-report=xml
       env:
         PYTHONPATH: ${{ github.workspace }}
         # Add your API keys as GitHub secrets if needed for tests
