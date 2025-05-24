@@ -11,4 +11,5 @@ Welcome to the OJU User Guide! This documentation is designed to help you get st
    getting-started
    usage
    prompts
+   theory
    examples/index

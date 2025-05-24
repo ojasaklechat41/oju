@@ -5,3 +5,4 @@ sphinx-copybutton
 sphinx-tabs
 sphinx-autodoc-typehints
 myst-parser
+sphinxcontrib-mermaid

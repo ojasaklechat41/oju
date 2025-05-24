@@ -34,6 +34,8 @@ extensions = [
     'sphinx_tabs.tabs',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
+    'sphinx.ext.graphviz',
+    'sphinxcontrib.mermaid',
 ]
 
 templates_path = ['_templates']

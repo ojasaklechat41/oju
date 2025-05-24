@@ -146,6 +146,53 @@ except Exception as e:
     print(f"An error occurred: {e}")
 ```
 
+### Working with Multiple Agents
+
+Run multiple agents in parallel for complex workflows:
+
+```python
+from concurrent.futures import ThreadPoolExecutor
+from oju.agent import Agent
+
+def run_agent(config):
+    return Agent(**config)
+
+# Define agent configurations
+agent_configs = [
+    {
+        'agent_name': 'researcher',
+        'model': 'gpt-4',
+        'provider': 'openai',
+        'prompt_input': 'Research the latest AI trends',
+        'temperature': 0.7
+    },
+    {
+        'agent_name': 'summarizer',
+        'model': 'claude-3-opus-20240229',
+        'provider': 'claude',
+        'prompt_input': 'Summarize this research',
+        'temperature': 0.3
+    },
+    {
+        'agent_name': 'critic',
+        'model': 'gemini-pro',
+        'provider': 'gemini',
+        'prompt_input': 'Provide constructive criticism',
+        'temperature': 0.5
+    }
+]
+
+# Run agents in parallel
+with ThreadPoolExecutor() as executor:
+    results = list(executor.map(run_agent, agent_configs))
+
+# Process results
+for i, result in enumerate(results):
+    print(f"Agent {i+1} output:")
+    print(result)
+    print("-" * 50)
+```
+
 ### Working with Different Providers
 
 Switch between different LLM providers with ease:
