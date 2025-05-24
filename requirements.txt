@@ -1,0 +1,8 @@
+openai
+anthropic
+google-genai
+python-dotenv
+sphinx
+sphinx_rtd_theme
+pytest
+pytest-cov
